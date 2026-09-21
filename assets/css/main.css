@@ -1331,7 +1331,7 @@ Sticky Header
     right: -5px;
     text-align: center;
     font-size: 18px;
-    color: #ffffff;
+    color: #000000;
     height: 30px;
     width: 30px;
     line-height: 30px;
@@ -2378,11 +2378,13 @@ Sticky Header
     border-radius: 9px;
     padding: 16px;
     min-height: 145px;
+    text-align: center;
 }
 
 .tool-box h4 {
     color: var(--navy);
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     margin-bottom: 13px;
 }
 
@@ -2392,11 +2394,19 @@ Sticky Header
     gap: 9px;
 }
 
+.tech-logos img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
 .tech-logos span {
     font-size: 9px;
     color: #6c747b;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -2777,6 +2787,12 @@ Sticky Header
     margin-right: 6px;
 }
 
+@media screen and (max-width: 991px) {
+    .certificate-section {
+        background-position: -360px;
+    }
+}
+
 /* FAQ */
 .faq-grid {
     display: grid;
@@ -2926,6 +2942,7 @@ Sticky Header
 .footer-main nav {
     display: flex;
     gap: 20px;
+    justify-content: center;
     margin: auto;
 }
 
@@ -2937,6 +2954,10 @@ Sticky Header
 .socials {
     display: flex;
     gap: 7px;
+}
+
+.socials li{
+    list-style: none;
 }
 
 .socials a {
@@ -3195,7 +3216,6 @@ Sticky Header
     .footer-bottom {
         padding: 15px 0;
         flex-direction: column;
-        align-items: flex-start;
     }
 }
 
