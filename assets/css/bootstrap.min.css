@@ -3280,7 +3280,7 @@ textarea.form-control.is-valid {
     display: none;
     width: 100%;
     margin-top: .25rem;
-    font-size: .875em;
+    font-size: 10px;
     color: var(--bs-form-invalid-color)
 }
 
@@ -6261,24 +6261,25 @@ fieldset:disabled .btn {
 
 .modal-backdrop {
     --bs-backdrop-zindex: 1050;
-    --bs-backdrop-bg: #000;
+    --bs-backdrop-bg: #000000a8;
     --bs-backdrop-opacity: 0.5;
     position: fixed;
     top: 0;
     left: 0;
     z-index: var(--bs-backdrop-zindex);
     width: 100vw;
+    backdrop-filter: blur(10px);
     height: 100vh;
-    background-color: var(--bs-backdrop-bg)
+    background-color: var(--bs-backdrop-bg);
 }
 
-.modal-backdrop.fade {
+/* .modal-backdrop.fade {
     opacity: 0
-}
+} */
 
-.modal-backdrop.show {
+/* .modal-backdrop.show {
     opacity: var(--bs-backdrop-opacity)
-}
+} */
 
 .modal-header {
     display: flex;
