@@ -3846,3 +3846,134 @@ Sticky Header
 }
 
 /* enquiry modal - end */
+.story-tab {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.story-tab.active {
+    background: #fff;
+    border-color: #f47b20;
+    transform: translateX(-5px);
+}
+
+.story-tab.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15%;
+    width: 4px;
+    height: 70%;
+    background: #f47b20;
+    border-radius: 0 4px 4px 0;
+}
+
+.story-tab:hover {
+    transform: translateX(-4px);
+}
+
+.story-video img {
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.story-video img.story-changing {
+    opacity: 0;
+    transform: scale(1.02);
+}
+
+/* ================= VIDEO MODAL ================= */
+
+#videoModal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#videoModal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+#videoModal .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+}
+
+#videoModal .modal-content {
+    position: relative;
+    z-index: 9999;
+    width: min(900px, 90vw);
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+#videoModal.open .modal-content {
+    transform: scale(1);
+}
+
+#videoModal iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+#videoModal .modal-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #fff;
+    color: #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+#videoModal .modal-close:hover {
+    background: #f47b20;
+    color: #fff;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    #videoModal .modal-content {
+        width: 94vw;
+        border-radius: 8px;
+    }
+
+    #videoModal .modal-close {
+        top: -48px;
+    }
+
+}
